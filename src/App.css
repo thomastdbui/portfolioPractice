@@ -1,0 +1,22 @@
+#navbar {
+    /* padding: 0!important; */
+    margin-bottom: 0!important;
+}
+
+#bg-img {
+    padding: 0!important;
+
+}
+
+.nav-link {
+    padding-left: 1.5rem!important;
+    padding-right: 1.5rem!important;
+}
+
+#something {
+    background-image: "./images/sunset.jpg";
+}
+
+#about, #work, #contact {
+    padding: 5rem;
+}
