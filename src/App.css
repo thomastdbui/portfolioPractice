@@ -1,16 +1,123 @@
-#navbar {
+
+:root {
+    --primary-lavender: rgb(200, 180, 255);
+    --primary-purple: rgb(100, 0, 100);
+    --color-two: rgb(167, 193, 233);
+    --color-three: rgb(154, 161, 250);
+    --color-four: rgb(119, 127, 247);
+    --color-five: rgb(197, 144, 241);
+
+
+}
+
+#modal-navbar {
+    scroll-behavior: smooth!important;
+}
+
+#navbar, #modal-navbar {
     /* padding: 0!important; */
     margin-bottom: 0!important;
+    /* border-top: 0.1875rem; */
 }
 
-#bg-img {
+/* #navbar {
+    position:sticky;
+    top:0;
+} */
+
+#modal-navbar {
+    background-color: transparent!important; 
+}
+
+.modal-header {
+    justify-content: space-evenly!important;
+
+
+}
+
+/* .modal-title {
+    justify-content: center!important;
+    padding-right: 8rem!important;
+} */
+
+.btn-close {
+    margin: 0!important;
+}
+
+#home, #modal-home{
     padding: 0!important;
-
 }
+
 
 .nav-link {
     padding-left: 1.5rem!important;
     padding-right: 1.5rem!important;
+    font-weight: 500!important;
+    letter-spacing: 0.0375rem!important;
+    cursor: pointer;
+    /* border-top: 0.1875rem !important; */
+
+}
+
+.modal{
+    padding: 0!important;
+    /* width: 90%!important; */
+    --bs-modal-width: 95%!important;
+    /* --bs-modal-width{}:500px; */
+}
+
+.modal-body {
+    /* width: 100%!important;
+    padding: 0!important; */
+    min-height: 75vh;
+    align-items: center!important;
+    flex-direction: center!important;
+}
+
+
+.nav-link.active {
+    /* border-top: 0.1875rem solid var(--primary-orange)!important; */
+    color: rgb(0, 0, 0, 0.55)!important;
+
+}
+
+/* .navbar-nav {
+    border-top: 0.1875rem!important;
+}
+.navbar {
+    border-top: 0.1875rem!important;
+    
+} */
+
+/* .nav-link:enabled {
+    color: red!important;
+    color: var(--primary-lavender);
+} */
+
+
+.nav-link:hover {
+    box-shadow: 0px 0.1875rem 0px 0px var(--primary-lavender) inset;
+
+    transition: box-shadow 0.5s;
+    
+
+
+    --bg-size: 400%;
+    --color-1: rgb(181, 70, 255);
+    --color-2: rgb(103, 28, 223);
+    /* font-size: clamp(2rem, 20vmin, 6rem); */
+    background: linear-gradient(
+                  90deg,
+                  var(--color-1),
+                  var(--color-2),
+                  var(--color-1)
+                ) 0 0 / var(--bg-size) 100%;
+    color: transparent!important;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move-bg 3.5s infinite linear;
+
+
 }
 
 #something {
@@ -20,3 +127,221 @@
 #about, #work, #contact {
     padding: 5rem;
 }
+
+
+
+
+
+
+
+  @media (prefers-reduced-motion: no-preference) {
+    .boujee-text-header, .boujee-text {
+      animation: move-bg 8s linear infinite;
+    }
+    @keyframes move-bg {
+      to {
+        background-position: var(--bg-size) 0;
+      }
+    }
+  }
+
+  .boujee-text-header {
+      font-size: clamp(2rem, 20vmin, 6rem);
+  }
+
+  .boujee-text, .boujee-text-header {
+    --bg-size: 400%;
+    /* --color-one: rgb(201, 152, 224); */
+    --color-two: rgb(167, 193, 233);
+    /* font-size: clamp(2rem, 20vmin, 6rem); */
+    background: linear-gradient(
+                  90deg,
+                  var(--primary-lavender),
+                  var(--color-two),
+                  var(--primary-lavender)
+                ) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move-bg 3.5s infinite linear;
+  }
+
+  .boujee-text-dark {
+    --bg-size: 400%;
+    --color-1: rgb(119, 70, 255);
+    --color-2: rgb(56, 128, 236);
+    /* font-size: clamp(2rem, 20vmin, 6rem); */
+    background: linear-gradient(
+                  90deg,
+                  var(--color-1),
+                  var(--color-2),
+                  var(--color-1)
+                ) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move-bg 3.5s infinite linear;
+  }
+  
+  .workRow {
+      padding-top: 1rem!important;
+      padding-bottom: 1rem!important;
+
+  }
+
+
+  .marquee {
+ 
+    color: linear-gradient(
+                  90deg,
+                  var(--primary-lavender),
+                  var(--color-two),
+                  var(--color-three),
+                  var(--color-four),
+                  var(--color-five),
+                  var(--primary-lavender)
+                ) 0 0 / var(--bg-size) 100%;
+  }
+
+  .marquee-holder {
+    position: -webkit-sticky!important;
+    position: sticky!important;
+    bottom: 0;
+
+    font-weight: bold;
+    
+    /* background-color: blueviolet; */
+
+
+  }
+
+
+
+.marquee-holder {
+	background: linear-gradient(-45deg, var(--color-two), var(--color-three), var(--color-four), var(--color-five));
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	/* height: 100vh; */
+}
+
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+.hover-1 img {
+    width: 105%;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    transition: all 0.3s;
+  }
+  
+  .hover-1-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* z-index: 99; */
+    transition: all 0.4s;
+  }
+
+
+  
+  
+  
+  .hover-1 .hover-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hover-1-description {
+    transform: translateY(0.5rem);
+    transition: all 0.4s;
+    opacity: 0;
+  }
+  
+  .hover-1:hover .hover-1-content {
+    bottom: 2rem;
+  }
+  
+  .hover-1:hover .hover-1-description {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .hover-1:hover img {
+    left: 0;
+  }
+  
+  .hover-1:hover .hover-overlay {
+    opacity: 0;
+  }
+
+
+
+
+  .hover {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 60%;
+  }
+  
+  
+  
+  .hover-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: all 0.4s;
+  }
+  
+  .hover img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+  }
+  
+  .hover-content {
+    position: relative;
+
+  }
+
+  #textBox {
+      width: 70rem!important;
+      /* margin-right: 0!important; */
+
+  }
+
+  .two-col {
+      width: 30rem!important;
+        overflow-wrap:break-word;
+        /* overflow: auto; */
+  }
+
+  .sketch {
+      /* height: 20rem!important; */
+      width: 20rem!important;
+  }
+
+  .sketch-text {
+      text-align: center;
+  }
+
+
+
